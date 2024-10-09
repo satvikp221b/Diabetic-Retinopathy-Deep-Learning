@@ -9,17 +9,18 @@ This project aims to detect Diabetic Retinopathy (DR) using deep learning models
 
 ## Methodology
 1. **Exploratory Data Analysis (EDA):**
-   - Conducted EDA to examine class imbalance and overall dataset characteristics. Images were preprocessed by cropping, resizing, and augmenting (rotation, mirroring) to balance the dataset and make it more suitable for training.
+   - Conducted EDA to examine class imbalance and overall dataset characteristics. 
    
 2. **Image Preprocessing:**
+   - Images were preprocessed by cropping, resizing, and augmenting (rotation, mirroring) to balance the dataset and make it more suitable for training.
    - Steps include cropping images to a resolution of 1800x1800, resizing them to 512x512 and 256x256, and performing data augmentation. Totally black or incomplete images were removed to improve training quality.
 
-3. **Model Pipeline:**
+4. **Model Pipeline:**
    - **Model 1 (EyeNet - Custom CNN):** Developed a custom CNN with three convolutional layers. However, the performance was moderate with accuracy around 80%, so this model was scrapped.
    - **Model 2 (Pre-trained CNNs):** Various pre-trained models such as AlexNet, VGGNet, GoogleNet, and ResNet were employed to improve accuracy. Hyperparameter tuning improved the models, but they were prone to overfitting, particularly on unseen data.
    - **Model 3 (Ensemble Model):** The final approach was to ensemble five pre-trained models (ResNet50, InceptionV3, Xception, DenseNet121, and DenseNet169). This model produced the best results, with improved accuracy, precision, recall, and F1-scores across all DR severity classes.
 
-4. **Web Application Implementation:**
+5. **Web Application Implementation:**
    - A Flask-based web app was developed to allow users to upload retinal images and receive real-time predictions on the severity of DR. The web app uses the ensemble model for predictions.
 
 ## Project Structure
