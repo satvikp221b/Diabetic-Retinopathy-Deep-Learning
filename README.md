@@ -64,16 +64,9 @@ The Ensemble model (Model 3) achieved the highest accuracy and F1-score, making 
 | Severe    | 0.51    | 0.48       | 0.49     | 0.98         | 92.71%    |
 | PDR       | 0.56    | 0.69       | 0.62     | 0.99         | 93.54%    |
 
-![Model 3 Performance](Images/Confusion_Matrix.png)
 
-![Website Look]
-
-![Website Look 2]
-
-
-
-
-
+This is how the result looks after we input left and right eye images
+![Website Look](Images/Website-Chart.png)
 
 ## Conclusion
 This project successfully demonstrates the use of deep learning models for detecting Diabetic Retinopathy (DR) from retinal fundus images. The Ensemble model, which combines ResNet50, InceptionV3, Xception, DenseNet121, and DenseNet169, outperformed individual models in accuracy, precision, and recall, particularly for severe DR stages. Integrating the model into a Flask web application enables real-time detection, making it a valuable tool for early diagnosis in resource-limited areas. This capability can significantly aid in mass screening efforts, helping to prevent vision loss through early intervention.
